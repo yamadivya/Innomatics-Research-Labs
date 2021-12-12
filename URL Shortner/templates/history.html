@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+History        
+{% endblock %}
+
+{% block body %}
+<h3>Here you can see previously shortened URLs</h3>
+<br>
+<div class="w3-container">
+<table class="w3-table w3-bordered w3-striped">
+    <thead>
+        <tr class="w3-teal">
+        <th scope="col">#</th>
+        <th scope="col">Short</th>
+        <th scope="col">Original</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for url in urls %}
+            <tr>
+                <th scope="row">{{ url['id'] }}</th>
+                <td>{{ url['short_url'] }}</td>
+                <td>{{ url['original_url'] }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <style>
+        .nav {
+          background-color: yellow; 
+          list-style-type: none;
+          text-align: center;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .nav li {
+          display: inline-block;
+          font-size: 20px;
+          padding: 20px;
+        }
+
+        input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }   
+
+        input[type=submit] {
+        width: 20%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+    background-color: #45a049;
+    }
+
+    div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/history">History</a></li>
+    </ul>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
